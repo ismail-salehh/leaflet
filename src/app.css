@@ -1,0 +1,117 @@
+/* ---------- App shell: a phone-width column, centered on big screens ---------- */
+.app { max-width: 480px; margin: 0 auto; min-height: 100svh; }
+.screen { padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* ---------- ScreenHeader ---------- */
+.screen-header { display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+.screen-header__back {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: none; padding: 4px 0;
+  color: var(--green); font-weight: 600; cursor: pointer;
+}
+.screen-header__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.screen-header__title { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.screen-header__subtitle { color: var(--muted); }
+.breadcrumb { font-size: 14px; color: var(--muted); }
+.breadcrumb__current { color: var(--green); font-weight: 600; }
+
+/* ---------- BottomActions ---------- */
+.bottom-actions {
+  position: sticky; bottom: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  padding: 16px 0;
+  background: linear-gradient(to top, var(--cream) 75%, transparent);
+}
+
+/* ---------- WateringSummary ---------- */
+.summary { display: flex; align-items: center; gap: 20px; padding: 16px 20px; }
+.summary__label { font-weight: 600; font-size: 14px; }
+.summary__count { font-size: 28px; font-weight: 800; }
+.summary__bar { flex: 1; display: flex; align-items: center; gap: 10px; }
+.summary__percent { font-size: 13px; color: var(--muted); min-width: 36px; text-align: right; }
+
+/* ---------- FilterTabs ---------- */
+.filters { display: flex; gap: 8px; }
+.filters__tab {
+  flex: 1;
+  padding: 10px 8px;
+  border-radius: 99px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  font-weight: 600; font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.filters__tab--active { background: var(--green); border-color: var(--green); color: white; }
+.filter-empty { text-align: center; color: var(--muted); padding: 32px 0; }
+
+/* ---------- PlantList / PlantCard ---------- */
+.plant-list { display: flex; flex-direction: column; gap: 12px; }
+.plant-card { display: flex; gap: 12px; padding: 12px; align-items: center; }
+.plant-card__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.plant-card__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.plant-card__name { font-size: 18px; font-weight: 700; padding-top: 2px; }
+.plant-card__meta { font-size: 13px; color: var(--muted); }
+.plant-card__bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; }
+.plant-card__bottom .btn { white-space: nowrap; margin-left: auto; font-size: 13px; padding: 7px 12px; min-height: 34px; }
+.plant-card .icon-btn { flex-shrink: 0; }
+
+/* ---------- PlantThumbnail ---------- */
+.thumb { border-radius: 12px; overflow: hidden; background: var(--cream); flex-shrink: 0; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb--sm { width: 72px; height: 72px; }
+.thumb--md { width: 96px; height: 96px; }
+.thumb--lg { width: 128px; height: 128px; }
+.thumb--empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  border: 1.5px dashed #d5ccb8; color: var(--muted); font-size: 12px;
+}
+
+/* ---------- EmptyState ---------- */
+.empty-state { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; padding: 8px 0; }
+.empty-state__image { width: 220px; border-radius: 50%; }
+.empty-state__title { font-size: 24px; font-weight: 800; }
+.empty-state__text { color: var(--muted); margin-bottom: 12px; }
+
+/* ---------- Actions sheet ---------- */
+.actions-sheet__head { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 8px; }
+.actions-sheet__title { font-size: 22px; font-weight: 800; margin-top: 4px; }
+.actions-sheet__subtitle { color: var(--muted); font-size: 14px; }
+
+/* ---------- Form ---------- */
+.form { display: flex; flex-direction: column; }
+.form__card { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.form__danger { border-top: 1px solid var(--line); padding-top: 12px; }
+
+.image-field { display: flex; gap: 14px; align-items: flex-start; }
+.image-field__preview { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.image-field__buttons { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.image-field__buttons .btn--md { padding: 10px 12px; font-size: 15px; }
+.image-field__hint { font-size: 13px; color: var(--muted); }
+
+/* ---------- ChooseImage grid ---------- */
+.image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.image-option {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 12px;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 700;
+}
+.image-option--none { border-style: dashed; background: transparent; color: var(--muted); font-weight: 500; }
+.image-option--selected { border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+.image-option__img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.image-option__placeholder { width: 100%; aspect-ratio: 1; display: grid; place-items: center; }
+.image-option__check {
+  position: absolute; top: 8px; right: 8px;
+  width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--green); color: white;
+}
+.image-option__pill { background: var(--green); color: white; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 99px; }
