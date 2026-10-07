@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useNavigate } from "react-router";
 import type { PlantDraft } from "../types/plant";
 import { usePlants } from "../hooks/usePlants";
 import { ROOMS } from "../data/rooms";
@@ -16,7 +17,6 @@ import ChooseImagePage from "./ChooseImagePage";
 
 type PlantFormPageProps = {
   plantId?: string; // given = Edit mode, missing = Add mode
-  onDone: () => void;
 };
 
 const EMPTY_DRAFT: PlantDraft = {
@@ -27,8 +27,10 @@ const EMPTY_DRAFT: PlantDraft = {
   wateringFrequency: 7,
 };
 
-export default function PlantFormPage({ plantId, onDone }: PlantFormPageProps) {
+export default function PlantFormPage({ plantId }: PlantFormPageProps) {
   const { plants, addPlant, updatePlant, deletePlant } = usePlants();
+  const navigate = useNavigate();
+  const onDone = () => navigate("/");
   const existingPlant = plants.find((p) => p.id === plantId) ?? null;
   const isEditing = plantId !== undefined;
 

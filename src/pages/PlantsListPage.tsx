@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import type { WaterFilter } from "../types/plant";
 import { usePlants } from "../hooks/usePlants";
 import { useFilteredPlants } from "../hooks/useFilteredPlants";
@@ -12,19 +13,17 @@ import EmptyState from "../components/plants/EmptyState";
 import PlantActionsSheet from "../components/plants/PlantActionsSheet";
 import DeletePlantDialog from "../components/plants/DeletePlantDialog";
 
-type PlantsListPageProps = {
-  onAddPlant: () => void;
-  onEditPlant: (id: string) => void;
-};
-
 const EMPTY_FILTER_TEXT: Record<WaterFilter, string> = {
   all: "",
   "needs-water": "Every plant has been watered today.",
   watered: "No plants watered yet today.",
 };
 
-export default function PlantsListPage({ onAddPlant, onEditPlant }: PlantsListPageProps) {
+export default function PlantsListPage() {
   const { plants, toggleWatered, deletePlant } = usePlants();
+  const navigate = useNavigate();
+
+  const onAddPlant = () => navigate("/plants/new");
 
   // LOCAL UI state: only this page cares about it, so it lives here, not in context.
   const [filter, setFilter] = useState<WaterFilter>("all");
@@ -76,7 +75,7 @@ export default function PlantsListPage({ onAddPlant, onEditPlant }: PlantsListPa
         onClose={() => setActionsPlantId(null)}
         onEdit={(id) => {
           setActionsPlantId(null);
-          onEditPlant(id);
+          navigate(`/plants/${id}/edit`);
         }}
         onDelete={(id) => {
           // Close the sheet, then open the confirm dialog for the same plant.

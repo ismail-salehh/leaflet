@@ -1,36 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
 import PlantsListPage from "./pages/PlantsListPage";
 import PlantFormPage from "./pages/PlantFormPage";
 
-// Which screen is showing. No router library: just a piece of state.
-// The "edit" screen also needs to know WHICH plant.
-type Screen = { name: "list" } | { name: "add" } | { name: "edit"; plantId: string };
+// Each screen now has its own URL:
+//   /                      -> list of plants
+//   /plants/new            -> add a plant
+//   /plants/:plantId/edit  -> edit one plant (":plantId" is a URL parameter)
+
+// Reads :plantId from the URL and hands it to the form.
+// key={plantId}: a different key = a brand new component with fresh state.
+function EditPlantRoute() {
+  const { plantId } = useParams();
+  return <PlantFormPage key={plantId} plantId={plantId} />;
+}
 
 function App() {
-  const [screen, setScreen] = useState<Screen>({ name: "list" });
+  const { pathname } = useLocation();
 
   // Start each new screen at the top of the page.
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [screen]);
-
-  const goToList = () => setScreen({ name: "list" });
+  }, [pathname]);
 
   return (
     <div className="app">
-      {screen.name === "list" && (
-        <PlantsListPage
-          onAddPlant={() => setScreen({ name: "add" })}
-          onEditPlant={(plantId) => setScreen({ name: "edit", plantId })}
-        />
-      )}
-
-      {screen.name === "add" && <PlantFormPage onDone={goToList} />}
-
-      {/* key={plantId}: a different key = a brand new component with fresh state */}
-      {screen.name === "edit" && (
-        <PlantFormPage key={screen.plantId} plantId={screen.plantId} onDone={goToList} />
-      )}
+      <Routes>
+        <Route path="/" element={<PlantsListPage />} />
+        <Route path="/plants/new" element={<PlantFormPage />} />
+        <Route path="/plants/:plantId/edit" element={<EditPlantRoute />} />
+        {/* Unknown URL: send the user back to the list */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
   );
 }
