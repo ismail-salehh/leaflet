@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { ChevronLeftIcon } from "../ui/icons";
+import "./ScreenHeader.css";
 
 type ScreenHeaderProps = {
   title: string;

@@ -1,0 +1,5 @@
+/* App shell: a phone-width column, centered on big screens */
+.app { max-width: 480px; margin: 0 auto; min-height: 100svh; }
+
+/* Every page's outer wrapper */
+.screen { padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 16px; }

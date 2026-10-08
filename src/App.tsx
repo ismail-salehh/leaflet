@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
 import PlantsListPage from "./pages/PlantsListPage";
 import PlantFormPage from "./pages/PlantFormPage";
+import "./App.css";
 
 // Each screen now has its own URL:
 //   /                      -> list of plants

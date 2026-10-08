@@ -59,3 +59,18 @@ button, input, select {
   outline: 2px solid var(--green);
   outline-offset: 2px;
 }
+
+/* White rounded surface, used by the summary, plant cards and the form */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Respect the "reduce motion" accessibility setting */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

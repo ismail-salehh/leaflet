@@ -1,0 +1,7 @@
+/* Sticks to the bottom of the screen while the page scrolls */
+.bottom-actions {
+  position: sticky; bottom: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  padding: 16px 0;
+  background: linear-gradient(to top, var(--cream) 75%, transparent);
+}

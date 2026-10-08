@@ -1,0 +1,8 @@
+.toggle { display: flex; align-items: center; justify-content: space-between; font-weight: 600; cursor: pointer; position: relative; }
+/* The real checkbox is invisible; the track + thumb are what you see */
+.toggle__input { position: absolute; opacity: 0; width: 0; height: 0; }
+.toggle__track { width: 52px; height: 30px; background: #d8d3c7; border-radius: 99px; position: relative; transition: background 0.2s; flex-shrink: 0; }
+.toggle__thumb { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; background: white; border-radius: 50%; transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+.toggle__input:checked + .toggle__track { background: var(--green); }
+.toggle__input:checked + .toggle__track .toggle__thumb { transform: translateX(22px); }
+.toggle__input:focus-visible + .toggle__track { outline: 2px solid var(--green); outline-offset: 2px; }

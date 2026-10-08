@@ -5,6 +5,7 @@ import ScreenHeader from "../components/layout/ScreenHeader";
 import BottomActions from "../components/layout/BottomActions";
 import Button from "../components/ui/Button";
 import ImageOptionCard from "../components/plants/ImageOptionCard";
+import "./ChooseImagePage.css";
 
 type ChooseImagePageProps = {
   initialImage: PlantImageId | null;

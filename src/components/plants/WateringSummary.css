@@ -1,0 +1,5 @@
+.summary { display: flex; align-items: center; gap: 20px; padding: 16px 20px; }
+.summary__label { font-weight: 600; font-size: 14px; }
+.summary__count { font-size: 28px; font-weight: 800; }
+.summary__bar { flex: 1; display: flex; align-items: center; gap: 10px; }
+.summary__percent { font-size: 13px; color: var(--muted); min-width: 36px; text-align: right; }

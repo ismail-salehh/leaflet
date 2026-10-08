@@ -1,5 +1,6 @@
 import type { Plant } from "../../types/plant";
 import PlantCard from "./PlantCard";
+import "./PlantList.css";
 
 type PlantListProps = {
   plants: Plant[];

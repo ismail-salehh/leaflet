@@ -1,0 +1,2 @@
+/* Shown when a filter tab has no plants */
+.filter-empty { text-align: center; color: var(--muted); padding: 32px 0; }

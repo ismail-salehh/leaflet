@@ -1,0 +1,18 @@
+.stepper { display: flex; align-items: center; gap: 10px; }
+.stepper__btn {
+  width: 44px; height: 44px;
+  font-size: 22px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  cursor: pointer;
+}
+.stepper__btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.stepper__value {
+  min-width: 64px; height: 44px;
+  display: grid; place-items: center;
+  border: 1.5px solid var(--line); border-radius: 10px;
+  background: var(--card);
+  font-weight: 600;
+}
+.stepper__unit { color: var(--muted); }

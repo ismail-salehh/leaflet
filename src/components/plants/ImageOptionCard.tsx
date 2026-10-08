@@ -1,4 +1,5 @@
 import { CheckIcon, ImageIcon } from "../ui/icons";
+import "./ImageOptionCard.css";
 
 type ImageOptionCardProps = {
   label: string;

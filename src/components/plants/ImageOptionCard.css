@@ -1,0 +1,21 @@
+.image-option {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 12px;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 700;
+}
+.image-option--none { border-style: dashed; background: transparent; color: var(--muted); font-weight: 500; }
+.image-option--selected { border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+.image-option__img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.image-option__placeholder { width: 100%; aspect-ratio: 1; display: grid; place-items: center; }
+.image-option__check {
+  position: absolute; top: 8px; right: 8px;
+  width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--green); color: white;
+}
+.image-option__pill { background: var(--green); color: white; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 99px; }

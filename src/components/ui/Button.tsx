@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react";
+import "./Button.css";
 
 // A "union type": variant can ONLY be one of these strings.
 // TypeScript will error if you write variant="blue".

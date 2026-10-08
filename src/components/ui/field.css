@@ -1,0 +1,12 @@
+/* Shared by every form field: TextField, Select, Stepper, PlantImageField */
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field__label { font-weight: 600; }
+.field__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+}
+.field__input::placeholder { color: #a6a299; }
+.field__input:focus { border-color: var(--green); outline: none; }

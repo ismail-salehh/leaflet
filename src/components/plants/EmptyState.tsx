@@ -1,6 +1,7 @@
 import emptyPot from "../../assets/empty-pot.png";
 import Button from "../ui/Button";
 import { PlusIcon } from "../ui/icons";
+import "./EmptyState.css";
 
 export default function EmptyState({ onAddPlant }: { onAddPlant: () => void }) {
   return (

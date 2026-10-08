@@ -3,6 +3,7 @@ import BottomSheet from "../ui/BottomSheet";
 import Button from "../ui/Button";
 import { PencilIcon, TrashIcon } from "../ui/icons";
 import PlantThumbnail from "./PlantThumbnail";
+import "./PlantActionsSheet.css";
 
 type PlantActionsSheetProps = {
   plant: Plant | null; // null = sheet closed

@@ -1,0 +1,11 @@
+.dialog { width: 100%; max-width: 360px; background: var(--card); border-radius: 24px; padding: 24px; text-align: center; animation: pop-in 0.15s ease-out; }
+.dialog__breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.dialog__breadcrumb-current { color: var(--orange-dark); font-weight: 600; }
+.dialog__icon { width: 64px; height: 64px; margin: 0 auto; border-radius: 50%; background: var(--orange-soft); color: var(--orange-dark); display: grid; place-items: center; }
+.dialog__title { margin: 12px 0 8px; font-size: 24px; font-weight: 800; }
+.dialog__message { color: var(--muted); }
+.dialog__warning { color: var(--orange-dark); margin-top: 4px; }
+.dialog__actions { display: flex; gap: 12px; margin-top: 24px; }
+.dialog__actions .btn { flex: 1; }
+
+@keyframes pop-in { from { transform: scale(0.95); opacity: 0; } }

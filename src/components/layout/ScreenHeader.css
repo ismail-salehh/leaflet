@@ -1,0 +1,13 @@
+.screen-header { display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+.screen-header__back {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: none; padding: 4px 0;
+  color: var(--green); font-weight: 600; cursor: pointer;
+}
+.screen-header__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.screen-header__title { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.screen-header__subtitle { color: var(--muted); }
+
+.breadcrumb { font-size: 14px; color: var(--muted); }
+.breadcrumb__current { color: var(--green); font-weight: 600; }

@@ -1,4 +1,6 @@
 import { useEffect, type ReactNode } from "react";
+import "./backdrop.css";
+import "./BottomSheet.css";
 
 type BottomSheetProps = {
   open: boolean;
