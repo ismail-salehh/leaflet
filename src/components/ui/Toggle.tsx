@@ -1,4 +1,4 @@
-import "./Toggle.css";
+import "./css/Toggle.css";
 type ToggleProps = {
   label: string;
   checked: boolean;

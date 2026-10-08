@@ -1,6 +1,6 @@
 import { useId } from "react";
-import "./field.css";
-import "./Stepper.css";
+import "./css/field.css";
+import "./css/Stepper.css";
 
 type StepperProps = {
   label?: string;

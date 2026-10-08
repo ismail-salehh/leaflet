@@ -1,6 +1,6 @@
 import ProgressBar from "../ui/ProgressBar";
 import { useWateringStats } from "../../hooks/useWateringStats";
-import "./WateringSummary.css";
+import "./css/WateringSummary.css";
 
 // This component gets its data from a hook instead of props.
 // Anything that changes the plants re-renders it automatically.

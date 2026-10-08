@@ -14,7 +14,7 @@ import { TrashIcon } from "../components/ui/icons";
 import PlantImageField from "../components/plants/PlantImageField";
 import DeletePlantDialog from "../components/plants/DeletePlantDialog";
 import ChooseImagePage from "./ChooseImagePage";
-import "./PlantFormPage.css";
+import "./css/PlantFormPage.css";
 
 type PlantFormPageProps = {
   plantId?: string; // given = Edit mode, missing = Add mode

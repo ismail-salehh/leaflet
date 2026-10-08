@@ -1,6 +1,6 @@
 import type { WaterFilter } from "../../types/plant";
 import { useWateringStats } from "../../hooks/useWateringStats";
-import "./FilterTabs.css";
+import "./css/FilterTabs.css";
 
 type FilterTabsProps = {
   value: WaterFilter;

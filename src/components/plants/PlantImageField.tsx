@@ -3,8 +3,8 @@ import { getPlantImage } from "../../data/plantImages";
 import Button from "../ui/Button";
 import { CloseIcon, ImageIcon } from "../ui/icons";
 import PlantThumbnail from "./PlantThumbnail";
-import "../ui/field.css";
-import "./PlantImageField.css";
+import "../ui/css/field.css";
+import "./css/PlantImageField.css";
 
 type PlantImageFieldProps = {
   image: PlantImageId | null;

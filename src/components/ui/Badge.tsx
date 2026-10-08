@@ -1,6 +1,6 @@
 import dropGreen from "../../assets/icons/drop-green.png";
 import dropOrange from "../../assets/icons/drop-orange.png";
-import "./Badge.css";
+import "./css/Badge.css";
 
 type BadgeTone = "success" | "warning";
 

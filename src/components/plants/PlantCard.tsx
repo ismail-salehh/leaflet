@@ -3,7 +3,7 @@ import Badge from "../ui/Badge";
 import Button from "../ui/Button";
 import { MoreIcon } from "../ui/icons";
 import PlantThumbnail from "./PlantThumbnail";
-import "./PlantCard.css";
+import "./css/PlantCard.css";
 
 type PlantCardProps = {
   plant: Plant;

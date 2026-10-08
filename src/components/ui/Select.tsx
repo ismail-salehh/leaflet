@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { ChevronDownIcon } from "./icons";
-import "./field.css";
-import "./Select.css";
+import "./css/field.css";
+import "./css/Select.css";
 
 type SelectProps = {
   label: string;

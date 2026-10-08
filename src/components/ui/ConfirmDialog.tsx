@@ -1,7 +1,7 @@
 import { useEffect, type ReactNode } from "react";
 import Button from "./Button";
-import "./backdrop.css";
-import "./ConfirmDialog.css";
+import "./css/backdrop.css";
+import "./css/ConfirmDialog.css";
 
 type ConfirmDialogProps = {
   open: boolean;

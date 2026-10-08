@@ -1,7 +1,7 @@
 import type { PlantImageId } from "../../types/plant";
 import { getPlantImage } from "../../data/plantImages";
 import { ImageIcon } from "../ui/icons";
-import "./PlantThumbnail.css";
+import "./css/PlantThumbnail.css";
 
 type PlantThumbnailProps = {
   image: PlantImageId | null;

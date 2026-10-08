@@ -12,7 +12,7 @@ import PlantList from "../components/plants/PlantList";
 import EmptyState from "../components/plants/EmptyState";
 import PlantActionsSheet from "../components/plants/PlantActionsSheet";
 import DeletePlantDialog from "../components/plants/DeletePlantDialog";
-import "./PlantsListPage.css";
+import "./css/PlantsListPage.css";
 
 const EMPTY_FILTER_TEXT: Record<WaterFilter, string> = {
   all: "",
